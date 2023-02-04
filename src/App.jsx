@@ -9,19 +9,19 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <div className="app bg-black snap-mandatory snap-y  overflow-scroll z-0">
-      <div className="h-screen snap-start">
+      <div className="h-screen md:snap-start">
       <Header />
       </div>
-      <div id="about" className="h-screen snap-center">
+      <div id="about" className="h-screen md:snap-center">
         <About />
       </div>
-      <div id="skills" className="h-screen snap-center">
+      <div id="skills" className="h-screen md:snap-center">
         <Skills />
       </div>
-      <div id="projects" className="h-screen snap-center">
+      <div id="projects" className="h-screen md:snap-center">
         <Projects />
       </div>
-      <div id="contact" className="h-screen snap-center">
+      <div id="contact" className="h-screen md:snap-center">
         <Contact />
       </div>
     </div>
