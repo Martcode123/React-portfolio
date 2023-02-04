@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer base {
+  .app {
+    @apply font-body scroll-smooth !overflow-x-hidden text-white h-screen scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#1E90FF];
   }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@layer components {
+  .header-link {
+    @apply cursor-pointer;
+  }
+  .span {
+    @apply relative uppercase text-sm font-medium before:bg-[#f9f9f9] 
+    before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 
+    before:absolute before:transform before:origin-left before:scale-x-0 
+    before:transition-all before:duration-200 group-hover:before:scale-x-100
+    group-hover:text-[#1E90FF] duration-300 ;
+  }
+  .blue {
+    @apply text-[#1E90FF]
+  }
+  .contactInfo {
+    @apply bg-slate-300/10 px-6 py-4 rounded-lg text-gray-400 border-b-2 border-black hover:border-[#1E90FF]/50 focus:border-[#1E90FF] focus:text-[#1E90FF] transition-all outline-none
+  }
+  
+}
+
+
+
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  background-color: #1e8fff65 !important;
+  font-size: 50px !important;
+  width: 40px !important;
+  height: 80px !important;
+  position: absolute !important;
+  top: 25% !important;
+}
+
+.owl-carousel {
+  margin-top: 100px;
+}
+
+.owl-carousel .owl-next {
+  right: -5px;
+}
+.owl-carousel .owl-prev {
+  left: -5px;
+}
+
+
+.owl-dot.active .anything {
+  background-color: #1E90FF !important;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.owl-carousel .owl-dot span {
+  background-color: #1e8fff65 !important;
+  width: 10px !important;
+}
+.owl-carousel .owl-dot.active span {
+  background-color: #1E90FF !important;
+  width: 20px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
